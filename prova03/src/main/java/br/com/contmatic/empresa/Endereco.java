@@ -2,12 +2,10 @@ package br.com.contmatic.empresa;
 
 public class Endereco {
     
-    private String logradouro;
+    private String uf;
     
     private String bairro;
     
-    private String uf;
-    
-    
+    private String logradouro;
 
 }

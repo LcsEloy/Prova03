@@ -8,15 +8,13 @@ import javax.validation.constraints.*;
 import org.hibernate.validator.*;
 
 public class Cliente {
+
+    @CPF
+    @NotBlank
+    private String cpf;
     
     @NotBlank
     private String nome;
-    
-    private DateTime dataNascimento;
-    
-    @NotBlank
-    @CPF
-    private String cpf;
     
     private String email;
     
@@ -24,5 +22,6 @@ public class Cliente {
     
     private Endereco endereco;
     
+    private DateTime dataNascimento;
 
 }

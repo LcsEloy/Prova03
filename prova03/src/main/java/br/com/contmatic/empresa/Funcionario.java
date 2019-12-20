@@ -4,13 +4,13 @@ import org.joda.time.DateTime;
 
 public class Funcionario {
 
+    private String nome;
+
+    private String cargo;
+
     private Double salario;
     
-    private String cargo;
-    
-    private String nome;
-    
-    private DateTime dataNascimento;
-    
     private DateTime dataAdmissao;
+
+    private DateTime dataNascimento;
 }
