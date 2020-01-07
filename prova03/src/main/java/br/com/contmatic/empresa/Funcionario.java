@@ -13,4 +13,5 @@ public class Funcionario {
     private DateTime dataAdmissao;
 
     private DateTime dataNascimento;
+    
 }
