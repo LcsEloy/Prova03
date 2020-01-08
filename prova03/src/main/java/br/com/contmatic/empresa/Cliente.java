@@ -2,6 +2,7 @@ package br.com.contmatic.empresa;
 
 import java.util.Set;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -21,16 +22,24 @@ public class Cliente {
     @NotBlank
     private String nome;
     
+    @Email
     private String email;
-    
-    private Set<Telefone> telefone;
     
     private Endereco endereco;
     
+    private Set<Telefone> telefone;
+    
     private DateTime dataNascimento;
     
-    
-    
+    public Cliente(String cpf, String nome, String email, Endereco endereco, Set<Telefone> telefone, DateTime dataNascimento) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.email = email;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.dataNascimento = dataNascimento;
+    }
+
     public String getCpf() {
         return cpf;
     }
@@ -55,20 +64,20 @@ public class Cliente {
         this.email = email;
     }
 
-    public Set<Telefone> getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(Set<Telefone> telefone) {
-        this.telefone = telefone;
-    }
-
     public Endereco getEndereco() {
         return endereco;
     }
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    public Set<Telefone> getTelefone() {
+        return telefone;
+    }
+    
+    public void setTelefone(Set<Telefone> telefone) {
+        this.telefone = telefone;
     }
 
     public DateTime getDataNascimento() {

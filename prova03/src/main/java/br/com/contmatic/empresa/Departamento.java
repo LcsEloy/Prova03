@@ -41,12 +41,13 @@ public class Departamento {
     
     @Override
     public boolean equals(Object that) {
-        return EqualsBuilder.reflectionEquals(this, that);
+        Departamento other = (Departamento) that;
+        return new EqualsBuilder().append(ramal, other.ramal).isEquals();
     }
 
     @Override
     public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+        return new HashCodeBuilder().append(ramal).toHashCode();
     }
 
     @Override
