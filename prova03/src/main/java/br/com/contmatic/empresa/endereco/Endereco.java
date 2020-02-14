@@ -1,4 +1,4 @@
-package br.com.contmatic.empresa;
+package br.com.contmatic.empresa.endereco;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

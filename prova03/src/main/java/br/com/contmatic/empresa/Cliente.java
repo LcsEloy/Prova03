@@ -12,6 +12,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import org.joda.time.DateTime;
 
 import br.com.caelum.stella.bean.validation.CPF;
+import br.com.contmatic.empresa.endereco.Endereco;
+import br.com.contmatic.empresa.telefone.Telefone;
 
 public class Cliente {
 
@@ -32,60 +34,60 @@ public class Cliente {
     private DateTime dataNascimento;
     
     public Cliente(String cpf, String nome, String email, Endereco endereco, Set<Telefone> telefone, DateTime dataNascimento) {
-        this.cpf = cpf;
-        this.nome = nome;
-        this.email = email;
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.dataNascimento = dataNascimento;
+        this.cpf = setCpf(cpf);
+        this.nome = setNome(nome);
+        this.email = setEmail(email);
+        this.endereco = setEndereco(endereco);
+        this.telefone = setTelefone(telefone);
+        this.dataNascimento = setDataNascimento(dataNascimento);
     }
 
     public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public @NotBlank String setCpf(String cpf) {
+        return this.cpf = cpf;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public @NotBlank String setNome(String nome) {
+        return this.nome = nome;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public @Email String setEmail(String email) {
+        return this.email = email;
     }
 
     public Endereco getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public Endereco setEndereco(Endereco endereco) {
+        return this.endereco = endereco;
     }
 
     public Set<Telefone> getTelefone() {
         return telefone;
     }
     
-    public void setTelefone(Set<Telefone> telefone) {
-        this.telefone = telefone;
+    public Set<Telefone> setTelefone(Set<Telefone> telefone) {
+        return this.telefone = telefone;
     }
 
     public DateTime getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(DateTime dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public DateTime setDataNascimento(DateTime dataNascimento) {
+        return this.dataNascimento = dataNascimento;
     }
 
     @Override

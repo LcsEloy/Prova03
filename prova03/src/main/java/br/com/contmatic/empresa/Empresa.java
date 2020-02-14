@@ -11,6 +11,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import org.hibernate.validator.constraints.br.CNPJ;
 import org.joda.time.DateTime;
 
+import br.com.contmatic.empresa.endereco.Endereco;
+import br.com.contmatic.empresa.telefone.Telefone;
+
 public class Empresa {
     
     @CNPJ

@@ -1,4 +1,4 @@
-package br.com.contmatic.empresa;
+package br.com.contmatic.empresa.departamento;
 
 import java.util.Set;
 
@@ -7,14 +7,22 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import br.com.contmatic.empresa.funcionario.Funcionario;
+
 public class Departamento {
-    
-    private Set<Funcionario> funcionarios;
-    
-    private Integer ramal;
     
     private String setor;
 
+    private Integer ramal;
+    
+    private Set<Funcionario> funcionarios;
+    
+    public Departamento(String setor, Integer ramal, Set<Funcionario> funcionarios) {
+        this.setor = setor;
+        this.ramal = ramal;
+        this.funcionarios = funcionarios;
+    }
+    
     public Set<Funcionario> getFuncionarios() {
         return funcionarios;
     }
