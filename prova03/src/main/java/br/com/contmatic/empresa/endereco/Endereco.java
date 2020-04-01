@@ -5,6 +5,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import br.com.contmatic.empresa.util.EnumTipoEndereco;
+
 public class Endereco {
     
     private String uf;
@@ -13,13 +15,13 @@ public class Endereco {
 
     private String bairro;
     
-    private TipoEndereco tipo;
+    private EnumTipoEndereco tipo;
     
     private String logradouro;
 
     private String complemento;
 
-    public Endereco(String uf, String cidade, String bairro, TipoEndereco tipo, String logradouro, String complemento) {
+    public Endereco(String uf, String cidade, String bairro, EnumTipoEndereco tipo, String logradouro, String complemento) {
         this.uf = uf;
         this.cidade = cidade;
         this.bairro = bairro;
@@ -52,11 +54,11 @@ public class Endereco {
         this.bairro = bairro;
     }
 
-    public TipoEndereco getTipo() {
+    public EnumTipoEndereco getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoEndereco tipo) {
+    public void setTipo(EnumTipoEndereco tipo) {
         this.tipo = tipo;
     }
 

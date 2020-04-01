@@ -5,13 +5,15 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import br.com.contmatic.empresa.util.EnumTipoTelefone;
+
 public class Telefone {
     
     private Integer ddd;
 
     private Integer numero;
     
-    private TipoTelefone tipo;
+    private EnumTipoTelefone tipo;
 
     public Integer getDdd() {
         return ddd;
@@ -29,11 +31,11 @@ public class Telefone {
         this.numero = numero;
     }
 
-    public TipoTelefone getTipo() {
+    public EnumTipoTelefone getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoTelefone tipo) {
+    public void setTipo(EnumTipoTelefone tipo) {
         this.tipo = tipo;
     }
     

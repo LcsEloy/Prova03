@@ -1,6 +1,6 @@
-package br.com.contmatic.empresa.telefone;
+package br.com.contmatic.empresa.util;
 
-public enum TipoTelefone {
+public enum EnumTipoTelefone {
     
     CELULAR("Celular", 9),
     
@@ -10,7 +10,7 @@ public enum TipoTelefone {
     
     private Integer tamanho;
     
-    private TipoTelefone(String descricao, Integer tamanho) {
+    private EnumTipoTelefone(String descricao, Integer tamanho) {
         this.descricao = descricao;
         this.tamanho = tamanho;
     }
